@@ -23,3 +23,8 @@ const assignmentSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+const Assigment = new mongoose.model("Assigment", assignmentSchema);
+
+module.exports.assignmentSchema = assignmentSchema;
+module.exports.Assigment = Assigment;
