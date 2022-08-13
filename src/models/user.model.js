@@ -1,37 +1,42 @@
 const mongoose = require("mongoose");
 const Joi = require("joi");
-const userSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-    minlength: 3,
-    maxlength: 255,
+const userSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+      minlength: 3,
+      maxlength: 255,
+    },
+    userType: {
+      type: String,
+      requried: true,
+      maxlength: 7,
+    },
+    email: {
+      type: String,
+      unique: true,
+      requried: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+    uniqueId: {
+      type: String,
+      unique: true,
+    },
+    gender: {
+      type: String,
+      required: true,
+      minlength: 4,
+      maxlength: 6,
+    },
   },
-  userType: {
-    type: String,
-    requried: true,
-    maxlength: 7,
-  },
-  email: {
-    type: String,
-    unique: true,
-    requried: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
-  uniqueId: {
-    type: String,
-    unique: true,
-  },
-  gender: {
-    type: String,
-    required: true,
-    minlength: 4,
-    maxlength: 6,
-  },
-});
+  {
+    timestamps: true,
+  }
+);
 
 const User = new mongoose.model("User", userSchema);
 
