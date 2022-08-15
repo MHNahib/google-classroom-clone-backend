@@ -11,7 +11,7 @@ const updateCourse = async (res, req, id) => {
   Course.findByIdAndUpdate(
     { _id: id },
     { name: req.body.name },
-    function (err, result) {
+    (err, result) => {
       if (err) {
         return responce(res, false, {}, 400, "Bad request.");
       } else {
