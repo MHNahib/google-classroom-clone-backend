@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const Joi = require("joi");
+Joi.objectId = require("joi-objectid")(Joi);
 const couseSchema = new mongoose.Schema(
   {
     name: {
@@ -24,5 +26,15 @@ const couseSchema = new mongoose.Schema(
 
 const Course = new mongoose.model("Course", couseSchema);
 
+// joi validation
+const validation = (body) => {
+  const schema = Joi.object({
+    name: Joi.string().min(3).max(255).required(),
+    teachersId: Joi.objectId().required(),
+  });
+  return schema.validate(body);
+};
+
 module.exports.couseSchema = couseSchema;
 module.exports.Course = Course;
+module.exports.CourseValidation = validation;

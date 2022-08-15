@@ -3,7 +3,7 @@ require("dotenv").config();
 const cors = require("cors");
 const db = require("./src/config/db");
 
-const { home, singup, login } = require("./src/routes");
+const { home, singup, login, course } = require("./src/routes");
 
 const app = express();
 
@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/v1/", home);
 app.use("/api/v1/singup", singup);
 app.use("/api/v1/login", login);
+app.use("/api/v1/course", course);
 
 const port = process.env.PORT || 5000;
 

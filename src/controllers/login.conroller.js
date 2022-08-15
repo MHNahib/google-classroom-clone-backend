@@ -17,6 +17,8 @@ const loginconroller = async (res, req) => {
 
   const token = user.generateAuthToken();
 
+  console.log("token ", token);
+
   res.header("x-auth-token", token);
   responce(
     res,
