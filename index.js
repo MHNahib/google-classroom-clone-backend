@@ -1,16 +1,17 @@
 const express = require("express");
 const db = require("./src/config/db");
 
-const { home } = require("./src/routes");
+const { home, singup } = require("./src/routes");
 
 const app = express();
 
 // middleware
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // routes
-app.use("/", home);
+app.use("/api/v1/", home);
+app.use("/api/v1/singup", singup);
 
 const port = process.env.PORT || 5000;
 
