@@ -14,7 +14,7 @@ const assignmentSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    date: {
+    lastDate: {
       type: Date,
       required: true,
     },
