@@ -15,3 +15,7 @@ module.exports.getAssignment = require("./assignment/getAssignment.controller");
 module.exports.createAssignment = require("./assignment/createAssignment.controller");
 module.exports.updateAssignment = require("./assignment/updateAssignment.controller");
 module.exports.deleteAssignment = require("./assignment/deleteAssignment.controller");
+
+// enrolled
+module.exports.getAllEnrolledCourse = require("./enroll/getAllEnrolledCourse.controller");
+module.exports.enrollToTheCourse = require("./enroll/enroll.controller");

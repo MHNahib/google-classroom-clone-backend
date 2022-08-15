@@ -7,3 +7,6 @@ module.exports.course = require("./couse.route");
 
 // assignmnet
 module.exports.assignment = require("./assignment.route");
+
+// enrolled
+module.exports.enrolled = require("./enrolled.route");

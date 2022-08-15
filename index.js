@@ -3,7 +3,14 @@ require("dotenv").config();
 const cors = require("cors");
 const db = require("./src/config/db");
 
-const { home, singup, login, course, assignment } = require("./src/routes");
+const {
+  home,
+  singup,
+  login,
+  course,
+  assignment,
+  enrolled,
+} = require("./src/routes");
 
 const app = express();
 
@@ -18,6 +25,7 @@ app.use("/api/v1/singup", singup);
 app.use("/api/v1/login", login);
 app.use("/api/v1/course", course);
 app.use("/api/v1/assignment", assignment);
+app.use("/api/v1/enroll", enrolled);
 
 const port = process.env.PORT || 5000;
 
