@@ -13,11 +13,13 @@ const submissionSchema = new mongoose.Schema(
     },
     dateTime: {
       type: Date,
-      required: true,
     },
     crossedDeadLine: {
       type: Boolean,
       required: true,
+    },
+    file: {
+      type: String,
     },
   },
   {
@@ -25,7 +27,7 @@ const submissionSchema = new mongoose.Schema(
   }
 );
 
-const Assigment = new mongoose.model("Submission", submissionSchema);
+const Submission = new mongoose.model("Submission", submissionSchema);
 
 module.exports.submissionSchema = submissionSchema;
 module.exports.Submission = Submission;

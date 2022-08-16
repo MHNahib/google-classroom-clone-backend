@@ -10,3 +10,6 @@ module.exports.assignment = require("./assignment.route");
 
 // enrolled
 module.exports.enrolled = require("./enrolled.route");
+
+// submit
+module.exports.submit = require("./submit.route");
