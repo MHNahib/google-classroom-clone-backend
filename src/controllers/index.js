@@ -23,3 +23,6 @@ module.exports.enrollToTheCourse = require("./enroll/enroll.controller");
 // submit
 module.exports.submitController = require("./submit/submit");
 module.exports.getAllAssignmentByIdController = require("./submit/getAssignmentSubmission.controller");
+
+// statistics
+module.exports.statisticscontroller = require("./statistics/statistics.controller");

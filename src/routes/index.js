@@ -13,3 +13,6 @@ module.exports.enrolled = require("./enrolled.route");
 
 // submit
 module.exports.submit = require("./submit.route");
+
+// statistics
+module.exports.statistics = require("./statistics.route");

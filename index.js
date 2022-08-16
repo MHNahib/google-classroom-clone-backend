@@ -11,6 +11,7 @@ const {
   assignment,
   enrolled,
   submit,
+  statistics,
 } = require("./src/routes");
 
 const app = express();
@@ -29,6 +30,7 @@ app.use("/api/v1/course", course);
 app.use("/api/v1/assignment", assignment);
 app.use("/api/v1/enroll", enrolled);
 app.use("/api/v1/submit", submit);
+app.use("/api/v1/statistics", statistics);
 
 const port = process.env.PORT || 5000;
 
