@@ -10,8 +10,6 @@ const deleteCourse = async (res, req, id) => {
   // delete the course
   course = await Course.findByIdAndRemove(id);
 
-  if (!course) return responce(res, false, {}, 404, "No course found.");
-
   return responce(res, true, { course }, 200, "Successfully deleted.");
 };
 

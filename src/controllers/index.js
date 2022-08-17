@@ -26,3 +26,6 @@ module.exports.getAllAssignmentByIdController = require("./submit/getAssignmentS
 
 // statistics
 module.exports.statisticscontroller = require("./statistics/statistics.controller");
+
+// profile
+module.exports.getUser = require("./profile.controller");

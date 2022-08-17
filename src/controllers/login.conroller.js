@@ -8,7 +8,7 @@ const loginconroller = async (res, req) => {
   let user = "";
   if (req.body.email) user = await User.findOne({ email: req.body.email });
   else user = await User.findOne({ uniqueId: req.body.uniqueId });
-  if (!user) return responce(res, false, {}, 404, "User already exists.");
+  if (!user) return responce(res, false, {}, 404, "User not found.");
 
   // compare password
   let isValid;
@@ -22,11 +22,12 @@ const loginconroller = async (res, req) => {
   res.header("x-auth-token", token);
   responce(
     res,
-    false,
+    true,
     {
       name: user.name,
       email: user.email,
       uniqueId: user.uniqueId,
+      token: token,
     },
     200,
     "Successful."

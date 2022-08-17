@@ -11,7 +11,7 @@ const couseSchema = new mongoose.Schema(
     },
     teachersId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Users",
+      ref: "User",
       required: true,
     },
     students: {

@@ -16,3 +16,6 @@ module.exports.submit = require("./submit.route");
 
 // statistics
 module.exports.statistics = require("./statistics.route");
+
+// profile
+module.exports.profile = require("./profile.route");
