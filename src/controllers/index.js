@@ -4,6 +4,7 @@ module.exports.loginconroller = require("./login.conroller");
 
 // course
 module.exports.getAllCourse = require("./course/getAllCourse.controller");
+module.exports.getCourseByTeacherId = require("./course/getCourseByTeacherId.controller");
 module.exports.getCourse = require("./course/getCourse.controller");
 module.exports.createNewCourse = require("./course/createCourse.controller");
 module.exports.updateCourse = require("./course/updateCourse.controller");

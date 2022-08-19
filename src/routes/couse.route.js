@@ -8,10 +8,14 @@ const {
   updateCourse,
   deleteCourse,
   getCourse,
+  getCourseByTeacherId,
 } = require("../controllers");
 
 router.get("/all", auth, async (req, res) => {
   getAllCourse(res, req);
+});
+router.get("/teacher/:id", auth, isTeacher, async (req, res) => {
+  getCourseByTeacherId(res, req, req.params.id);
 });
 router.get("/:id", auth, async (req, res) => {
   getCourse(res, req, req.params.id);
